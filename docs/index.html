@@ -112,7 +112,6 @@
         <input id="company_name" type="text" name="company">
       </div>
       <div>
-
         <label for="role_name">
           Role
         </label>
@@ -121,7 +120,9 @@
       <button class="btn" id="copy">Copy to Clipboard</button>
     </div>
   </div>
-
+  <div>
+    <a href="https://github.dev/tagpro/cover-letter-builder/">Permanent update cover letter</a>
+  </div>
   <script src="js/clipboard.min.js"></script>
   <script>
     String.prototype.replaceAll = function (search, replacement) {
@@ -130,27 +131,19 @@
     };
   </script>
   <script defer>
-    document.getElementById('cover_letter_body').value = `Jaspreet Singh
-Melbourne, VIC, 3024
-+61 450 327 168 | findjsk@gmail.com
-github.com/tagpro | www.jaspreet.info
-
----
-
-Dear Hiring Manager,
+    document.getElementById('cover_letter_body').value = `Dear Hiring Manager,
 
 I am writing to express my strong interest in the {role} position at {company}. As a dedicated backend engineer with over 8 years of experience building scalable systems, I am excited about the opportunity to contribute to your team and grow my career with an organization that values open culture, constructive feedback, and professional development.
 
-As a backend-focused engineer, I bring deep expertise in Golang and gRPC, having built robust payment systems at ANZ Bank and API infrastructures at Zendesk. My experience includes developing the ANZ Plus payment platform using Golang, gRPC, Docker, Kubernetes, and GCP Cloud Spanner, as well as leading API standardization initiatives at Zendesk. Beyond technical contributions, I have consistently mentored junior developers and interns, believing that knowledge sharing and collaborative problem-solving drive both individual and team success.
+As a backend-focused engineer, I bring deep expertise in Golang and gRPC, having built robust payment systems at ANZ Bank and API infrastructures at Zendesk. My experience includes developing the ANZ Plus payment platform using Golang, gRPC, Docker, Kubernetes, and GCP Cloud Spanner. I also have experience in Python where I was using Python in the Zendesk's Sandbox team using celerey to build processing pipeline to help customers clone their production account into a sandbox account. Beyond technical contributions, I have consistently mentored junior developers and interns, believing that knowledge sharing and collaborative problem-solving drive both individual and team success.
 
-Regarding my visa status, I am currently transitioning to my spouse's visa, which provides full working rights in Australia and is valid until November 2030. I expect confirmation from the Department of Home Affairs within 3-5 weeks. Additionally, I plan to apply for permanent residency this year, further demonstrating my commitment to building a long-term career in Australia and seeking an organization where I can contribute meaningfully for the next decade and beyond.
+Regarding my visa status, I am currently transitioning to my spouse's visa, which provides full working rights in Australia and is valid until November 2030. I expect confirmation from the Department of Home Affairs within 3-5 weeks. Additionally, I plan to apply for permanent residency this year, further demonstrating my commitment to building a long-term career in Australia and seeking an organization where I can contribute and grow meaningfully for the next decade and beyond.
 
 I would welcome the opportunity to discuss how my backend engineering expertise, mentoring experience, and commitment to collaborative development can contribute to {company}'s continued success. Thank you for considering my application, and I look forward to hearing from you.
 
 Warm regards,
 
-Jaspreet Singh
-    `;
+Jaspreet Singh`;
     new ClipboardJS('.btn', {
       text: function (trigger) {
         let company = document.getElementById('company_name').value;
